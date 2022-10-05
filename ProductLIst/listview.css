@@ -1,0 +1,38 @@
+#ProductList {
+    margin: 0;
+    padding: .3rem;
+    background-color: #eee;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+#ProductList>.view {
+    display: inline-block;
+    margin: .5rem;
+    padding: .5rem;
+    font-size: 1.2rem;
+}
+
+.view {
+    background: right/contain content-box border-box no-repeat white;
+    border-radius: 10px;
+}
+/*Если продукт испорчен установить красный фон*/
+
+.view > h2,
+.view > p {
+    margin: .5rem;
+    font-size: 1rem;
+}
+img{
+    width:"20px";
+    height:"20px";
+}
+input::placeholder{
+    color: red;
+    font-size: 1.2em;
+    font-style: italic;
+}
+input{
+    display: block;
+    width: 110px;
+}

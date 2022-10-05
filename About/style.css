@@ -1,0 +1,58 @@
+aside {
+    width: 40%;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+}
+
+aside > ol {
+    margin: .5rem;
+}
+
+ol {
+    font-family: 'Fira Sans', sans-serif;
+    list-style: square;
+}
+a:link,
+a:visited {
+    color: rebeccapurple;
+    font-weight: bold;
+}
+a:hover {
+    color:hotpink;
+}   
+button:active {
+    color: rgb(236, 62, 18);
+
+}
+h2:nth-child(3n) {
+    color: rgb(48, 110, 74);
+}
+
+h1,h2{
+    font-family: 'Roboto', italic;
+}
+.layer1{
+    position: relative; 
+    background: #f0f0f0; 
+    height: 350px; 
+       
+}
+.frLayer{
+    position: absolute;
+    bottom: 10px;
+    right: 40%; 
+    
+    line-height: 50px; 
+}
+.line{
+    text-decoration: underline red;
+}
+.DIVForm{
+    background: black; 
+    color: #964823;
+    
+}

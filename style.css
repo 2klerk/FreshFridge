@@ -1,0 +1,17 @@
+@import url("navbar.css");
+@import url("TopHeader.css");
+footer {
+    display: flex;
+    padding: 5px;
+    background-color: #45a1ff;
+    color: rgb(17, 16, 16);
+    border-radius: 20px;
+}
+header{
+    top: 0;
+    position: sticky;
+    /* можно добавить fixed */
+}
+main{
+    margin-top: 20px;
+}
