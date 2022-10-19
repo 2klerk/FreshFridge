@@ -84,11 +84,11 @@ function edit(id) {
 }
 function del(id) {
     const element = document.getElementById("Sec"+id);
+    k=false;
     element.remove(); 
 }
 
 document.write(' <article  id="ProductList"> ');
-document.write(' <h1>ProductList</h1>');
 var mas=importJSON();
 for (let i = 0;i< mas.length; i++){  
     addE(i,mas[i]["name"],mas[i]["date"],mas[i]["category"]);

@@ -44,7 +44,7 @@ h1,h2{
 .frLayer{
     position: absolute;
     bottom: 10px;
-    right: 40%; 
+    margin-left: 30%; 
     
     line-height: 50px; 
 }
@@ -52,7 +52,31 @@ h1,h2{
     text-decoration: underline red;
 }
 .DIVForm{
-    background: black; 
+    
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: beige;
     color: #964823;
     
+}
+input{
+    border-radius: 5px;
+    display: block;
+}
+#USText{
+    width: 100px;
+}
+.fieldset{
+    height: 120px;
+}
+
+#Email:focus{
+    background-color: lightblue;
+}
+#PSW:focus{
+    background-color: lightblue;
+}
+video{
+    width: 300px;
+    height: 340px;
 }

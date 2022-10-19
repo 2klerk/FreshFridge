@@ -38,18 +38,35 @@
                 <img src="media/fridge_l11.jpg" alt="Fridge" width="300" height="300">
             </div>
         </div>
+        <div style="background-color: gray;">
         <div class="DIVForm">
             <form action="">
-                <input type="text">
-                <input type="password">
-                <input type="email">
-                <input type="file">
-                <input type="checkbox">
-                <input type="radio">
-                <input type="submit">
-                <input type="datetime-local">
-            </form>
+                <input type="number" min="1" max="10" placeholder="Number" id="USText" style="margin-left: 30%;" >
+                <input type="text" pattern="^\d"min="1" max="10" placeholder="Number" id="USText" style="margin-left: 30%;" >
+                <input type="email" placeholder="Email"  id="Email" required="required" style="margin-left: 30%;">
+                <input type="password" placeholder="Password" id="PSW" required="required" style="margin-left: 30%;">
+                <input type="file" style="margin-left: 30%;">
+                <input type="radio" style="margin-left: 30%;">
+                <input type="submit" style="margin-left: 30%;">
+                <input type="datetime-local" style="margin-left: 30%;">
+                <p><textarea style="margin-left: 30%;" cols="11" rows="7" minlength="1" maxlength="20" placeholder="SomeCode"></textarea></p>
+                <fieldset style="margin-left: 30%;width: 20px;" >    
+                    <legend>Соглашение</legend>
+                    <input type="checkbox">Согласен
+                    <input type="checkbox">Не согласен
+                </fieldset>         
+                <p><select multiple size="1" required="required">
+                <option>Мясной продукт</option>
+                <option>Выпечка</option>
+                <option>Молочный продукт</option>
+                <option>Молоко</option>
+                </select></p>
+              </form>
         </div>
+    </div>
+    <div>
+        <iframe src="rickroll.html" height="350" width="320"></iframe>
+    </div>
     </main>
 </body>
 </html>
