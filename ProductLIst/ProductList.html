@@ -5,32 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
     <link rel="stylesheet" href="listview.css">
+<!--    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
 </head>
 <body>
-    <div id="firstLayout">
-        <nav>
-            <div class="navbar">
-                <div class="container nav-container">
-                    <input class="checkbox" type="checkbox" name="" id=""/>
-                    <div class="hamburger-lines">
-                        <span class="line line1"></span>
-                        <span class="line line2"></span>
-                        <span class="line line3"></span>
-                    </div>
-                    <div class="logo">
-                    </div>
-                    <div class="menu-items">
+<div id="firstLayout">
+    <nav>
+        <div class="navbar">
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id=""/>
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="menu-items">
+                    <div id="area_item">
                         <li><a href="#">Импортировать JSON</a></li>
-                        <li><a href="#">Скачать JSON</a></li>
-                        <li><a href="gallery.html">Галерея</a></li>
+                        <li><a href="javascript:download()" id="downloadJSON" download>Скачать JSON</a></li>
+                        <li><a href="gallery/gallery.html">Галерея</a></li>
                         <li><a href="#">Удалить</a></li>
                     </div>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
+</div>
+<main>
+    <div>
+        <input type="file" id="inputFile" >
     </div>
-    <main>
-        <script src="List.js"></script>
-    </main>
+    <script src="List.js"></script>
+    <script src="action.js"></script>
+    <div id="emptyArea"></div>
+    <div>
+        <form id="inputArea">
+            <input autocomplete="off"  required="required" id="Product" class="inputProduct" placeholder="Product" type="text">
+            <input autocomplete="off"  required="required" id="Dat" class="inputProduct" placeholder="Date" type="date">
+            <input autocomplete="off"  required="required" id="Category" class="inputProduct" placeholder="Category" type="text">
+            <button onclick="AddNew()"  id="AddButtonINP" type="button"></button>
+        </form>
+        <button onclick="funcTransport()" id="addButton" type="button"><img id="imgButton" src="media/plus%20(1).png">
+        </button>
+    </div>
+</main>
 </body>
 </html>

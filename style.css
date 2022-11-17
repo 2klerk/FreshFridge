@@ -1,17 +1,116 @@
 @import url("navbar.css");
 @import url("TopHeader.css");
-footer {
-    display: flex;
+@import url("footer.css");
+
+
+
+
+.ContactUs{
+    width: 300px;
+}
+#gridContact{
+    display: inline-grid;
     padding: 5px;
-    background-color: #45a1ff;
-    color: rgb(17, 16, 16);
-    border-radius: 20px;
+    grid-template-columns: 1fr 1fr;
+    margin:0 auto;
 }
-header{
-    top: 0;
-    position: sticky;
-    /* можно добавить fixed */
+
+.ContactUs img{
+    width: 70px;
+    grid-column: auto/span 1;
+
 }
-main{
-    margin-top: 20px;
+.ContactUs a{
+    grid-column: 2;
+}
+
+
+
+/*Mobile*/
+/*Tablet*/
+/*Desktop*/
+@media (min-width:320px){
+    body{
+        display: grid;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    }
+    header{
+        grid-area: header;
+    }
+    main{
+        grid-area: main;
+        padding-top: 250px;
+        margin: 10px;
+    }
+    footer{
+        grid-area: footer;
+    }
+    #FootCont{
+        display: grid;
+        padding: 5px;
+        grid-template-row:auto auto;
+        margin:0 auto;
+    }
+}
+@media (min-width:769px){
+    body{
+        display: grid;
+    }
+    main{
+        padding-top: 220px;
+    }
+    #FootCont{
+        display: grid;
+        padding: 5px;
+        grid-template-row:2;
+        grid-template-columns: 1fr 1fr;
+        margin:0 auto;
+    }
+}
+@media (min-width: 1001px) {
+    body{
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+                "header header"
+                "aside main"
+                "footer footer";
+    }
+    header{
+        grid-area: header;
+    }
+    aside{
+        display: flex;
+        align-content: center;
+        grid-area: aside;
+    }
+    aside ul{
+        width: 100px;
+        margin-top: 1000px;
+    }
+    main{
+
+        padding-top: 250px;
+        margin: 10px;
+    }
+    footer{
+        width: 100%;
+        grid-area: footer;
+    }
+    #container{
+        grid-area: main;
+        padding-top: 220px;
+        justify-self: center;
+    }
+    #FootCont{
+        display: grid;
+        padding: 5px;
+        grid-template-row:1;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin:0 auto;
+    }
 }

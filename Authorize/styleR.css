@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+@media (min-width:320px){
+    .container form{
+        width: 200px;
+        display: grid;
+    }
+    .container {
+        position: relative;
+        padding: 60px;
+        min-height: 380px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(119, 133, 132, 0.24);
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+        margin: 15px auto;
+    }
+    #sector1{
+        grid-row: 1;
+    }
+}
+@media (min-width:769px){
+    .container form{
+        grid-template-columns: 1fr 1fr;
+        display: grid;
+    }
+    .container {
+        position: relative;
+        padding: 60px;
+        min-height: 380px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(119, 133, 132, 0.24);
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+        margin: 15px auto;
+    }
+    #sector2{
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "El Messiri", sans-serif;
+}
+
+body {
+    background: #031323;
+    overflow: hidden;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    border-radius: 5px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 2%);
+}
+
+
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 380px;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #76b7a8);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+
+.box {
+    position: relative;
+}
+
+.box .square {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    animation: animate 6s linear infinite;
+    animation-delay: calc(-1s * var(--i));
+}
+
+
+.box .square:nth-child(1) {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    top: -15px;
+    right: -45px;
+}
+
+.box .square:nth-child(2) {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    top: 105px;
+    left: -125px;
+    z-index: 2;
+}
+
+.box .square:nth-child(3) {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    bottom: 85px;
+    right: -45px;
+    z-index: 2;
+}
+
+
+.form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.form h2 {
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+
+section:hover {
+
+}
+
+
+.container .box:hover .square::before {
+    opacity: 1;
+}
+
+.container .box:hover .square:after {
+    opacity: 1;
+}
+
+
+/* двигаются на месте */
+@keyframes animate {
+    0%, 100% {
+        transform: translateY(30px);
+    }
+
+    50% {
+        transform: translate(-30px);
+    }
+}
+
+
+.form .Login {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form .Login input {
+    width: 80%;
+    outline: none;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 10px;
+    padding-left: 40px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+.form .inputLogin .view {
+    background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+    transition: 0.5s;
+}
+
+.form .Login .fas {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+}
+
+
+.form .Login input[type=submit] {
+    background: #fff;
+    color: #111;
+    max-width: 100px;
+    padding: 8px 10px;
+    box-shadow: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 1.5s;
+}
+
+.form .Login input[type=submit]:hover {
+    background: linear-gradient(115deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.25));
+    color: #fff;
+    transition: 0.5s;
+}
+
+
+.form .Login input::placeholder {
+    color: #fff;
+}
+
+.form .Login span {
+    position: absolute;
+    left: 30px;
+    padding: 10px;
+    display: inline-block;
+    color: #fff;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.form .Login input:focus ~ span,
+.form .Login input:valid ~ span {
+    transform: translateX(-30px) translateY(-25px);
+    font-size: 12px;
+}
+
+
+
+/*Surname*/
+
+.form .Surname {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form .Surname input {
+    width: 80%;
+    outline: none;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 10px;
+    padding-left: 40px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+.form .Surname .view {
+    background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+    transition: 0.5s;
+}
+
+.form .Surname .fas {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+}
+
+
+.form .Surname input[type=submit] {
+    background: #fff;
+    color: #111;
+    max-width: 100px;
+    padding: 8px 10px;
+    box-shadow: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 1.5s;
+}
+
+.form .Surname input[type=submit]:hover {
+    background: linear-gradient(115deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.25));
+    color: #fff;
+    transition: 0.5s;
+}
+
+
+.form .Surname input::placeholder {
+    color: #fff;
+}
+
+.form .Surname span {
+    position: absolute;
+    left: 30px;
+    padding: 10px;
+    display: inline-block;
+    color: #fff;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.form .Surname input:focus ~ span,
+.form .Surname input:valid ~ span {
+    transform: translateX(-30px) translateY(-25px);
+    font-size: 12px;
+}
+/*Email*/
+
+.form .Email {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form .Email input {
+    width: 80%;
+    outline: none;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 10px;
+    padding-left: 40px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+.form .Email .view {
+    background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+    transition: 0.5s;
+}
+
+.form .Email .fas {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+}
+
+
+.form .Email input[type=submit] {
+    background: #fff;
+    color: #111;
+    max-width: 100px;
+    padding: 8px 10px;
+    box-shadow: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 1.5s;
+}
+
+.form .Email input[type=submit]:hover {
+    background: linear-gradient(115deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.25));
+    color: #fff;
+    transition: 0.5s;
+}
+
+
+.form .Email input::placeholder {
+    color: #fff;
+}
+
+.form .Email span {
+    position: absolute;
+    left: 30px;
+    padding: 10px;
+    display: inline-block;
+    color: #fff;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.form .Email input:focus ~ span,
+.form .Email input:valid ~ span {
+    transform: translateX(-30px) translateY(-25px);
+    font-size: 12px;
+}
+/*Password*/
+
+.form .Pass {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form .Pass input {
+    width: 80%;
+    outline: none;
+    border: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 10px;
+    padding-left: 40px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+.form .Pass .view {
+    background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+    transition: 0.5s;
+}
+
+.form .Pass .fas {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+}
+
+
+.form .Pass input[type=submit] {
+    background: #fff;
+    color: #111;
+    max-width: 100px;
+    padding: 8px 10px;
+    box-shadow: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 1.5s;
+}
+
+.form .Pass input[type=submit]:hover {
+    background: linear-gradient(115deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.25));
+    color: #fff;
+    transition: 0.5s;
+}
+
+
+.form .Pass input::placeholder {
+    color: #fff;
+}
+
+.form .Pass span {
+    position: absolute;
+    left: 30px;
+    padding: 10px;
+    display: inline-block;
+    color: #fff;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.form .Pass input:focus ~ span,
+.form .Pass input:valid ~ span {
+    transform: translateX(-30px) translateY(-25px);
+    font-size: 12px;
+}
+
+
+
+
+
+
+.form p {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.form p a {
+    color: #fff;
+}
+
+
+.form p a:hover {
+    background-color: #000;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.remember {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
