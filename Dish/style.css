@@ -1,0 +1,18 @@
+html{
+    background-image: url("background.jpg");
+}
+.Dish{
+    background-color: white;
+    display: grid;
+    grid-template-rows: auto ;
+    grid-template-columns: 1fr 1fr;
+}
+.Name{
+    border: solid 1px;
+    grid-column: 1;
+}
+.Recipe{
+    white-space: pre-line;
+    border: solid 1px;
+    grid-column: 2;
+}

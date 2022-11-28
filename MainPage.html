@@ -6,69 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreshFridge</title>
 </head>
-
-
 <body>
-
 <header class="TopHeader">
     <div id="logo">
-        <img src="image/fr.png" width="100" height="100">
+        <img src="image/fr.png" width="100px" height="100px" alt="fridgeImage">
     </div>
     <div id="contacts" style="float:right;">
         <i class="Number"></i> +777777777 |
         <i class="Mail"></i> mail.ru
     </div>
     <ul id="navbar">
-        <li><a href="#TopicMain">Главное</a></li>
-        <li><a href="#Contact">Контакты</a></li>
-        <li><a href="#About">Описание</a></li>
-        <li><a href="ProductLIst/ProductList.html">Продукты</a></li>
-        <li><a href="#News">Новости</a></li>
+        <li><a href="ProductList.html">Продукты</a></li>
+        <li><a href="Dish.html">Блюда</a></li>
+        <li><a href="News.html">Новости</a></li>
+        <li><a href="Authorize/Registration.html">Регистрация</a></li>
+        <li><a href="Authorize/Enter.html">Вход</a></li>
     </ul>
 </header>
-<aside>
-    <ul>
-        <li>
-            123
-        </li>
-    </ul>
-</aside>
 <div id="container">
     <main>
         <h1 id="TopicMain">Главное </h1>
         <nav class="menu">
             <ul>
-                <a href="#About">Описание работы</a>
-            </ul>
-            <ul>
-                <a href="#News">Новости проекта</a>
+                <a href="News.html">Новости проекта</a>
             </ul>
             <ul>
                 <a href="#Problem">Смысл</a>
             </ul>
         </nav>
-        <a><h3>Авторизация</h3></a>
-        <ul>
-            <ol start="1" type="1">
-                <li><a href="Authorize/Enter.html"><h4>Войти</h4></a></li>
-                <li><a href="Authorize/Registration.html"><h4>Регистрация</h4></a></li>
-            </ol>
-        </ul>
         <h2 id="Contact">О приложении</h2>
-        <P><a href="About/About.html">Описание работы</a></P>
-        <h2 id="Topic2">Контакты</h2>
-        <nav class="menu">
-            <ul>
-                <a href="tel:+777777777">+777777777</a>
-            </ul>
-            <ul>
-                <a href="mailto:@mail.ru">Почта</a>
-            </ul>
-        </nav>
+        <P><a href="News.html">Описание работы</a></P>
         <h3 id="About">Описание</h3>
         <a>Данный проект предназначен для учёта ваших продуктов. Веб версия была сделана для пользоватлей, у которых нет
-            возможности скачать приложение к себе на телефон</a>
-
+            возможности скачать приложение на телефон</a>
+        <h2>Использование</h2>
+        <ul>
+            <li><a>В панели навигации вкладка "Продукты" ведём пользователя к страницы с карточками продукта.</a></li>
+            <li><a>Вкладка "Блюда" к списку блюд и их рецептам.</a></li>
+            <li><a>"Новости" - список нововведений.</a></li>
+            <li><a>И соотвественно "Регистрация" - для созданий нового пользователя</a></li>
+            <li><a>"Вход" - для того, чтобы зайти под учётной записью если такая имеется</a></li>
+        </ul>
         <h3 id="Problem">Смысл</h3>
         <dl>
             <dt>Актуальность:</dt>
@@ -99,25 +77,40 @@
 <footer id="FootCont">
     <div class="AboutUs">
         <h2>About us</h2>
+        <ul>
+            <li>Рарзработал Интернет ресурс</li>
+            <li>Группа: ИКБО-02-21</li>
+            <li>ФИО: Пискун Дмитрий Михайлович</li>
+        </ul>
     </div>
     <div class="GridSocial">
         <h2>Social</h2>
         <div class="social">
-            <a class="social__icon youtube" href="#"><i class="fab fa-instagram"><img
+            <a class="social__icon youtube" href="https://www.youtube.com/"><i class="fab fa-instagram"><img
                     src="ProductList\gallery\img\SocIcon\youtube.png"></i></a>
-            <a class="social__icon facebook" href="#"><i class="fab fa-instagram"><img
-                    src="ProductList\gallery\img\SocIcon\facebook.png"></i></a>
-            <a class="social__icon telegram" href="#"><i class="fab fa-telegram"><img
-                    src="ProductList\gallery\img\SocIcon\telegram.png"></i></a>
+            <a class="social__icon facebook" href="http://facebook.com/"><i class="fab fa-instagram"><img src="ProductList\gallery\img\SocIcon\facebook.png"></i></a>
+            <a class="social__icon telegram" href="https://web.telegram.org/k/""><i class="fab fa-telegram"><img src="ProductList\gallery\img\SocIcon\telegram.png"></i></a>
         </div>
-        <div class="ContactUs">
-            <h2>Contact Us</h2>
-            <div id="gridContact">
-                <img src="telephone.png">
-                <a href="tel:+777777777">+777777777</a>
-            </div>
+    </div>
+    <div class="ContactUs">
+        <h2>Contact Us</h2>
+        <div id="gridContact">
+            <img src="image/telephone.png" alt="tel">
+            <a href="tel:+777777777">+777777777</a>
+        </div>
+        <div id="gridEmail">
+            <img src="image/email.png" alt="tel">
+            <a href="mailto:@mail.ru">Почта</a>
         </div>
     </div>
 </footer>
+<aside>
+    <h2>Якорные ссылки</h2>
+    <ul>
+        <li><a href="#TopicMain">Главное</a></li>
+        <li><a href="#Contact">Контакты</a></li>
+        <li><a href="#About">Описание</a></li>
+    </ul>
+</aside>
 </body>
 </html>

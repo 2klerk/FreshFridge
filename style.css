@@ -3,114 +3,130 @@
 @import url("footer.css");
 
 
-
-
-.ContactUs{
-    width: 300px;
+.ContactUs {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 80px 80px;
+    grid-gap: 10px;
+    width: 150px;
 }
-#gridContact{
-    display: inline-grid;
-    padding: 5px;
+
+.ContactUs div {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    margin:0 auto;
+    grid-template-rows: auto;
+    grid-gap: 5px;
 }
 
-.ContactUs img{
+.ContactUs img {
     width: 70px;
-    grid-column: auto/span 1;
-
 }
-.ContactUs a{
-    grid-column: 2;
-}
-
-
 
 /*Mobile*/
 /*Tablet*/
 /*Desktop*/
-@media (min-width:320px){
-    body{
+@media (min-width: 320px) {
+    body {
+        margin: 0 0 0 0;
         display: grid;
         grid-template-areas:
         "header"
         "main"
         "footer";
     }
-    header{
+
+    header {
         grid-area: header;
     }
-    main{
+
+    aside {
+        display: None;
+    }
+
+    main {
         grid-area: main;
-        padding-top: 250px;
         margin: 10px;
     }
-    footer{
+
+    footer {
+        width: 97.5%;
         grid-area: footer;
     }
-    #FootCont{
+
+    #FootCont {
         display: grid;
         padding: 5px;
-        grid-template-row:auto auto;
-        margin:0 auto;
+        grid-template-rows:auto auto;
+        margin: 0 auto;
+    }
+
+    .social {
+        display: block;
     }
 }
-@media (min-width:769px){
-    body{
+
+@media (min-width: 769px) {
+    body {
+        margin: 0 0 0 0;
         display: grid;
-    }
-    main{
-        padding-top: 220px;
-    }
-    #FootCont{
-        display: grid;
-        padding: 5px;
-        grid-template-row:2;
-        grid-template-columns: 1fr 1fr;
-        margin:0 auto;
-    }
-}
-@media (min-width: 1001px) {
-    body{
-        padding: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         grid-template-areas:
                 "header header"
                 "aside main"
                 "footer footer";
     }
-    header{
+
+    #FootCont {
+        width: 98.8%;
+        display: grid;
+        padding: 5px;
+        grid-template-rows:auto auto;
+        grid-template-columns: 1fr 1fr;
+    }
+    aside {
+        display: none;
+    }
+
+    .social {
+        display: block;
+    }
+}
+
+@media (min-width: 1001px) {
+    body {
+        margin: 0 0 0 0;
+        padding: 0;
+        display: grid;
+        grid-template-areas:
+                "header header"
+                "aside main"
+                "footer footer";
+    }
+    aside {
+        background: linear-gradient(0deg, rgba(227, 227, 227, 0.5), rgba(197, 125, 125, 0.5)), rgba(0, 255, 238, 0.24);
+        background-color: yellow;
+    }
+    header {
         grid-area: header;
     }
-    aside{
-        display: flex;
+
+    aside {
+        padding: 10px;
+        display: inline;
         align-content: center;
         grid-area: aside;
     }
-    aside ul{
-        width: 100px;
-        margin-top: 1000px;
-    }
-    main{
 
-        padding-top: 250px;
-        margin: 10px;
-    }
-    footer{
-        width: 100%;
-        grid-area: footer;
-    }
-    #container{
+    #container {
         grid-area: main;
-        padding-top: 220px;
-        justify-self: center;
     }
-    #FootCont{
+
+    #FootCont {
         display: grid;
-        padding: 5px;
-        grid-template-row:1;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        margin:0 auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 5px;
+    }
+
+    .social {
+        display: flex;
     }
 }

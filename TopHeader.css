@@ -1,11 +1,10 @@
 .TopHeader {
+  background: linear-gradient(0deg, rgba(173, 165, 165, 0.5), rgba(182, 98, 98, 0.5)), #520044;
+  padding: 10px;
   align-content: center;
-  width: 98%;
-  position: absolute;
-  float: left;
+  position: relative;
   border: 1px solid #333;
-  box-shadow: 8px 8px 5px #444;
-  padding: 20px 12px;
+  box-shadow:8px 8px 8px 8px #444;
   background-color: #2073b4;
-  border-radius: 20px;
+  border-radius: 0 0 20px 0;
 }

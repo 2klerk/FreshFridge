@@ -1,8 +1,7 @@
 footer {
-    padding: 10px;
-    position: relative;
-    margin: -8px;
+    background: linear-gradient(0deg, rgba(173, 165, 165, 0.5), rgba(182, 98, 98, 0.5)), #520044;
     height: 100%;
+    position: relative;
     background-color: #2073b4;
 }
 
@@ -24,7 +23,7 @@ footer {
     margin: 10px;
     background-color: #f2f2f2;
     border-radius: 50%;
-    box-shadow: 0px 0px 5px #00000080;
+    box-shadow: 0 0 5px #00000080;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -65,7 +64,7 @@ footer {
 
 .social__icon:hover {
     transform: translateY(-4px);
-    box-shadow: 0px 0px 15px #00000080;
+    box-shadow: 0 0 15px #00000080;
 }
 
 .social__icon:hover i {
