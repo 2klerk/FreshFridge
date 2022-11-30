@@ -111,7 +111,6 @@ function fromFile() {
 function importJSON() {
     let mas = [];
     mas.push(new elem("meet1", "2022-11-11", "meet"));
-    mas.push(new elem("meet1", "2022-11-11", "meet"));
     mas.push(new elem("meet2", "2022-12-22", "meet"));
     mas.push(new elem("meet3", "2022-12-22", "meet"));
     mas.push(new elem("meet4", "2022-12-22", "meet"));
@@ -271,7 +270,7 @@ function AddNew() {
                 let sec1 = document.createElement('section');
                 sec1.className = "view";
                 sec1.id = "Sec" + id;
-                sec1.innerHTML = "<h2 id=N" + id + ">" + Name + "</h2>" + "<p id=D" + id + ">" + Dat + "</p>" + "<p id=C" + id + ">" + Cat + "</p>" + "<section class=Button></section> <button class=EDIT id=" + id + " onclick=edit(this.id)><img src=media/pencil.png alt=edit width=20px height=20px></button>" + "<button class=DEL id=" + id + " onclick=del(this.id)><img src=media/trash.png alt=thrash width=20px height=20px></button>";
+                sec1.innerHTML = "<h2 id=N" + id + ">" + Name + "</h2>" + "<p id=D" + id + ">" + Dat + "</p>" + "<p id=C" + id + ">" + Cat + "</p>" + "<section class=Button></section> <button class=EDIT id=" + id + " onclick=edit(this.id)><img src=ProductList/media/pencil.png alt=edit width=20px height=20px></button>" + "<button class=DEL id=" + id + " onclick=del(this.id)><img src=ProductList/media/trash.png alt=thrash width=20px height=20px></button>";
                 "</section>" + "</section>";
                 sec1.style.opacity = "0%";
                 sec1.style.transition = "0.5s";
@@ -294,8 +293,12 @@ function download() {
 
 function DelAll(){
     const list = document.getElementsByClassName('view');
+    const h = document.getElementsByClassName('CatTitle');
     while(list[0]) {
         list[0].parentNode.removeChild(list[0]);
+    }
+    while (h[0]){
+        h[0].parentNode.removeChild(h[0]);
     }
 }
 let mas = importJSON();
@@ -303,4 +306,3 @@ for (let i = 0; i < mas.length; i++) {
     addE(i, mas[i]["name"], mas[i]["date"], mas[i]["category"]);
 }
 let a = new ArrayOperation(mas);
-a.SortByDate("<");

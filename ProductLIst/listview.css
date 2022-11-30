@@ -13,6 +13,7 @@ body {
     background-color: #dedcdc;
 }
 #ProductList > .view {
+    justify-content: center;
     transition: 0.4s;
     display: inline-block;
     margin: .5rem;
@@ -21,7 +22,6 @@ body {
 }
 .view input{
     transition: 0.5s;
-    margin-bottom: 6px;
 }
 @media (min-width:320px){
     .view{
@@ -29,9 +29,6 @@ body {
     }
     .view button{
         width: 30%;
-    }
-    .EDITFORM {
-        margin-left: 10%;
     }
 }
 @media (min-width:769px){
@@ -41,9 +38,6 @@ body {
     .view button{
         width: 30%;
     }
-    .EDITFORM {
-        margin-left: 30%;
-    }
 }
 @media (min-width: 1001px) {
     .view{
@@ -51,9 +45,6 @@ body {
     }
     .view button{
         width: 30%;
-    }
-    .EDITFORM {
-        margin-left: 20%;
     }
 }
 .view {
@@ -81,10 +72,6 @@ body {
 }
 
 
-input {
-    display: block;
-    width: 110px;
-}
 
 /* 1 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -311,7 +298,10 @@ body {
     cursor: pointer;
 }
 .EDITFORM {
-    margin-top: 8px;
+    margin-bottom: 8px;
+    display: block;
+    text-align: center;
+    width: 100%;
 }
 
 #AddButtonINP{
