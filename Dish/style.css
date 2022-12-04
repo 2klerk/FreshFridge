@@ -1,5 +1,12 @@
 html{
-    background-image: url("background.jpg");
+    background-image: url("../BackGround/BackgroundDish.jpg");
+}
+body{
+    margin: 0;
+}
+.DishList{
+    margin-top: 15px;
+    padding: 5px;
 }
 .Dish{
     background-color: white;
@@ -15,4 +22,9 @@ html{
     white-space: pre-line;
     border: solid 1px;
     grid-column: 2;
+}
+@media (min-width: 1001px) {
+    .DishList{
+        font-size: 170%;
+    }
 }

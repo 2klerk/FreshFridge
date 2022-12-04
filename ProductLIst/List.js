@@ -1,25 +1,5 @@
 let k = false;
 let KAdd = false
-
-class elem {
-    constructor(name, date, category) {
-        this.name = name;
-        this.date = date;
-        this.category = category
-    }
-
-    getName() {
-        return this.name;
-    }
-
-    getDate() {
-        return this.date;
-    }
-
-    getCat() {
-        return this.category;
-    }
-}
 class Category{
     constructor(Category,array) {
         this.Category=Category
@@ -100,7 +80,20 @@ class ArrayOperation {
     getCat() {
         return this.cat;
     }
+    setArray(array){
+        this.array=array.filter(function (el) {
+            return el != null;
+        });
+    }
 }
+
+
+let mas = importJSON();
+for (let i = 0; i < mas.length; i++) {
+    addE(i, mas[i]["name"], mas[i]["date"], mas[i]["category"]);
+}
+let a = new ArrayOperation(mas);    //глобальная переменная
+
 
 function fromFile() {
     let file = document.getElementById("inputFile");
@@ -110,24 +103,16 @@ function fromFile() {
 
 function importJSON() {
     let mas = [];
-    mas.push(new elem("meet1", "2022-11-11", "meet"));
-    mas.push(new elem("meet2", "2022-12-22", "meet"));
-    mas.push(new elem("meet3", "2022-12-22", "meet"));
-    mas.push(new elem("meet4", "2022-12-22", "meet"));
-    mas.push(new elem("meet5", "2022-12-22", "meet"));
-    mas.push(new elem("meet6", "2022-12-22", "meet"));
-    mas.push(new elem("meet7", "2022-12-22", "meet"));
-    mas.push(new elem("meet8", "2022-12-22", "meet"));
-    mas.push(new elem("meet9", "2021-12-22", "meet"));
-    mas.push(new elem("meet10", "2022-12-22", "meet"));
-    mas.push(new elem("meet11", "2022-12-22", "meet"));
-    mas.push(new elem("meet12", "2022-12-22", "meet"));
-    mas.push(new elem("meet13", "2022-12-22", "meet"));
-    mas.push(new elem("meet14", "2022-12-22", "meet"));
-    mas.push(new elem("meet15", "2022-12-22", "meet"));
-    mas.push(new elem("meet16", "2022-12-22", "meet"));
-    mas.push(new elem("meet17", "2022-12-22", "meet"));
-    mas.push(new elem("meet18", "2022-12-22", "meet"));
+    mas.push(new elem("meat1", "2022-11-11", "meat"));
+    mas.push(new elem("meat2", "2022-12-22", "meat"));
+    mas.push(new elem("meat3", "2022-11-30", "meat"));
+    mas.push(new elem("meat4", "2022-12-22", "meat"));
+    mas.push(new elem("meat5", "2022-12-22", "meat"));
+    mas.push(new elem("meat6", "2022-12-22", "meat"));
+    mas.push(new elem("meat7", "2022-12-22", "meat"));
+    mas.push(new elem("meat8", "2022-12-22", "meat"));
+    mas.push(new elem("meat9", "2021-12-22", "meat"));
+    mas.push(new elem("bread", "2021-12-22", "bakery products"));
     mas.push(new elem("NeMoloko", "2022-12-22", "milk"));
     return mas;
 }
@@ -237,6 +222,8 @@ function del(id) {
     const element1 = document.getElementById("Sec" + id);
     k = false;
     delete mas[id];
+    a.setArray(mas);
+
     console.log(mas);
     element1.style.transition = ".5";
     element1.style.transform = "translateY(-30px)";
@@ -301,8 +288,3 @@ function DelAll(){
         h[0].parentNode.removeChild(h[0]);
     }
 }
-let mas = importJSON();
-for (let i = 0; i < mas.length; i++) {
-    addE(i, mas[i]["name"], mas[i]["date"], mas[i]["category"]);
-}
-let a = new ArrayOperation(mas);

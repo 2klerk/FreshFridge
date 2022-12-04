@@ -1,10 +1,31 @@
 .TopHeader {
+  text-align: center;
   background: linear-gradient(0deg, rgba(173, 165, 165, 0.5), rgba(182, 98, 98, 0.5)), #520044;
   padding: 10px;
   align-content: center;
   position: relative;
   border: 1px solid #333;
-  box-shadow:8px 8px 8px 8px #444;
+  box-shadow:8px 1px 8px 8px #444;
   background-color: #2073b4;
   border-radius: 0 0 20px 0;
+}
+#navbar {
+  border: 2px solid #0066FF;
+  border-radius: 20px 5px;
+  background-color: #33ADFF;
+  margin-top: 30px;
+}
+#navbar li {
+  display: inline;
+}
+#navbar a {
+  color: #fff;
+  padding: 5px 9px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+#navbar a:hover {
+  border-radius: 20px 5px;
+  background-color: #0066FF;
 }

@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
     <link rel="stylesheet" href="ProductLIst/listview.css">
+    <link rel="stylesheet" href="TopHeader.css">
+    <script src="Class.js"></script>
     <script src="ProductLIst/filter.js"></script>
     <!--    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
 </head>
 <body>
+<header class="TopHeader">
+    <div id="logo">
+        <img src="image/fr.png" width="70px" height="70px" alt="fridgeImage">
+    </div>
+    <div id="contacts" style="float:right;">
+        <i class="Number"></i> +777777777 |
+        <i class="Mail"></i> mail.ru
+    </div>
+    <ul id="navbar">
+        <li><a href="MainPage.html">Главная</a></li>
+        <li><a href="Dish.html">Блюда</a></li>
+        <li><a href="News.html">Новости</a></li>
+        <li><a href="Registration.html">Регистрация</a></li>
+        <li><a href="Enter.html">Вход</a></li>
+    </ul>
+</header>
 <div id="firstLayout">
     <nav>
         <div class="navbar">
@@ -22,8 +40,7 @@
                 <div class="menu-items">
                     <div id="area_item">
                         <li><a href="javascript:download()" id="downloadJSON" download>Скачать JSON</a></li>
-                        <li><a href="ProductLIst/gallery/gallery.html">Галерея</a></li>
-                        <li><a href="#">Удалить</a></li>
+<!--                    <li><a href="ProductLIst/gallery/gallery.html">Галерея</a></li>-->
                         <!--                        <a href="#">Импортировать JSON</a>-->
                         <!--                        <a href="javascript:download()" id="downloadJSON" download>Скачать JSON</a>-->
                         <!--                        <a href="ProductLIst/gallery/gallery.html">Галерея</a>-->
@@ -39,8 +56,8 @@
         <input type="file" id="inputFile">
         <div>
             <h2>Фильтры</h2>
-            <label>Упорядочить<input type="checkbox" name="checkbox" value="value" style="margin-top: -10px" onchange="filterSort(this)"></label>
-            <label>По категориям<input type="checkbox" name="checkbox" value="value" style="margin-top: -10px" onchange="filterCat(this)"></label>
+            <label>Упорядочить<input id="filter1" type="checkbox" name="checkbox" value="value" style="margin-top: -10px"></label>
+            <label>По категориям<input id="filter2" type="checkbox" name="checkbox" value="value" style="margin-top: -10px"></label>
         </div>
     </div>
     <article id="ProductList">
@@ -49,16 +66,17 @@
     <div id="emptyArea"></div>
     <div>
         <form id="inputArea">
-            <input autocomplete="off" required="required" id="Product" class="inputProduct" placeholder="Product"
-                   type="text">
-            <input autocomplete="off" required="required" id="Dat" class="inputProduct" placeholder="Date" type="date">
-            <input autocomplete="off" required="required" id="Category" class="inputProduct" placeholder="Category"
-                   type="text">
-            <button onclick="AddNew()" id="AddButtonINP" type="button"></button>
+            <label for="Product"></label><input autocomplete="off" required="required" id="Product" class="inputProduct" placeholder="Product"
+                                                type="text">
+            <label for="Dat"></label><input autocomplete="off" required="required" id="Dat" class="inputProduct" placeholder="Date" type="date">
+            <label for="Category"></label><input autocomplete="off" required="required" id="Category" class="inputProduct" placeholder="Category"
+                                                 type="text">
+            <button onclick="AddNew()" id="AddButtonINP" type="button">Добавить</button>
         </form>
         <button onclick="funcTransport()" id="addButton" type="button"><img id="imgButton" src="ProductLIst/media/plus%20(1).png">
         </button>
     </div>
 </main>
+<script src="ProductLIst/button.js"></script>
 </body>
 </html>

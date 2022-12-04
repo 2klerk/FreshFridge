@@ -4,27 +4,42 @@
     <link rel="icon" href="C:\Users\Dima\Desktop\web\project\image\buffet.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="About/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="TopHeader.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
-    <title>About</title>
+    <script src="About/News.js" charset="windows-1251"></script>
+    <title>Новости</title>
 </head>
 <body>
-<header>
-    <a href="MainPage.html">
-        <div class="arrow">
-            <span class='end-arrow'></span>
-            <span class='begin-arrow'></span>
-        </div>
-    </a>
+<link rel="stylesheet" href="TopHeader.css">
+<header class="TopHeader">
+    <div id="logo">
+        <img src="image/fr.png" width="70px" height="70px" alt="fridgeImage">
+    </div>
+    <div id="contacts" style="float:right;">
+        <i class="Number"></i> +777777777 |
+        <i class="Mail"></i> mail.ru
+    </div>
+    <ul id="navbar">
+        <li><a href="MainPage.html">Главная</a></li>
+        <li><a href="ProductList.html">Продукты</a></li>
+        <li><a href="Dish.html">Блюда</a></li>
+        <li><a href="Registration.html">Регистрация</a></li>
+        <li><a href="Enter.html">Вход</a></li>
+    </ul>
 </header>
 <main>
     <h2 id="News">Новости проекта</h2>
-    <ol start="1" type="1">
-        <li>(10.09.2022)Работа над главной страницей</li>
-        <li>(21.09.2022)Добавление каскадной разметки и новых страниц</li>
-        <li>(26.11.2022)Добавлена страница с блюдами</li>
-    </ol>
+    <div id="cards">
+        <script>
+            let array=[]
+            array.push(new info("10.09.2022","Работа над главной страницей"))
+            array.push(new info("21.09.2022","Добавление каскадной разметки и новых страниц"))
+            array.push(new info("30.11.2022","Добавлена шапка для лучшей навигации по сайту"))
+            // array.push(new info("4.12.2022","Добавлена функция поиска блюд по содержанию холодильника"))
+            let a=new ManagerNews(array)
+            a.createOnScreen()
+        </script>
+    </div>
 </main>
 </body>
 </html>

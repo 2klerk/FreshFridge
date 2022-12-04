@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="TopHeader.css">
+    <link rel="stylesheet" href="Authorize/styleR.css"/>
+</head>
+<body>
+<header class="TopHeader">
+    <div id="logo">
+        <img src="image/fr.png" width="70px" height="70px" alt="fridgeImage">
+    </div>
+    <div id="contacts" style="float:right;">
+        <i class="Number"></i> +777777777 |
+        <i class="Mail"></i> mail.ru
+    </div>
+    <ul id="navbar">
+        <li><a href="MainPage.html">Главная</a></li>
+        <li><a href="MainPage.html">Новости</a></li>
+        <li><a href="ProductList.html">Продукты</a></li>
+        <li><a href="Dish.html">Блюда</a></li>
+        <li><a href="Registration.html">Регистрация</a></li>
+    </ul>
+</header>
+<section class="container">
+    <div class="box">
+        <div class="container">
+            <div class="form">
+                <h2>Вход</h2>
+                <form action="">
+                    <div class="inputBx">
+                        <label>
+                            <input type="text" required="required" placeholder="Логин">
+                        </label>
+                    </div>
+                    <div class="inputBx password">
+                        <label for="password-input"></label><input id="password-input" type="password" name="password" required="required"
+                                                                   placeholder="Пароль">
+                    </div>
+                    <div class="remDiv">
+                        <label>
+                            <a class="remember">Запомнить</a>
+                            <input type="checkbox">
+                        </label>
+                    </div>
+                    <input type="submit" value="Войти" id="button">
+                </form>
+                <p>Забыли пароль? <a href="#">Клик</a></p>
+                <p>У вас нет аккаунта? <a href="Registration.html">Регистрация</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
