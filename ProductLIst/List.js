@@ -140,8 +140,8 @@ function addE(id, name, date, category) {
     el.innerHTML+='                <p id="D' + id + '">' + date + '</p>';
     el.innerHTML+='                <p id="C' + id + '">' + category + '</p>';
     el.innerHTML+='                <section class="Button">';
-    el.innerHTML+='                    <button class="EDIT" id=' + id + ' onclick="edit(this.id)"><Footer src="Footer/ProductList/pencil.png" alt="edit" width="20px" height="20px"></button>';
-    el.innerHTML+='                    <button class="DEL" id=' + id + ' onclick="del(this.id)"><Footer src="Footer/ProductList/trash.png" alt="thrash" width="20px" height="20px"></button>';
+    el.innerHTML+='                    <button class="EDIT" id=' + id + ' onclick="edit(this.id)"><img src="img/ProductList/pencil.png" alt="edit" width="20px" height="20px"></img>';
+    el.innerHTML+='                    <button class="DEL" id=' + id + ' onclick="del(this.id)"><img src="img/ProductList/trash.png" alt="thrash" width="20px" height="20px"></img>';
     el.innerHTML+='                </section>';
     parent.appendChild(el)
     setStatus(el, date);
