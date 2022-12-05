@@ -140,8 +140,8 @@ function addE(id, name, date, category) {
     el.innerHTML+='                <p id="D' + id + '">' + date + '</p>';
     el.innerHTML+='                <p id="C' + id + '">' + category + '</p>';
     el.innerHTML+='                <section class="Button">';
-    el.innerHTML+='                    <button class="EDIT" id=' + id + ' onclick="edit(this.id)"><img src="img/ProductList/pencil.png" alt="edit" width="20px" height="20px"></button>';
-    el.innerHTML+='                    <button class="DEL" id=' + id + ' onclick="del(this.id)"><img src="img/ProductList/trash.png" alt="thrash" width="20px" height="20px"></button>';
+    el.innerHTML+='                    <button class="EDIT" id=' + id + ' onclick="edit(this.id)"><Footer src="Footer/ProductList/pencil.png" alt="edit" width="20px" height="20px"></button>';
+    el.innerHTML+='                    <button class="DEL" id=' + id + ' onclick="del(this.id)"><Footer src="Footer/ProductList/trash.png" alt="thrash" width="20px" height="20px"></button>';
     el.innerHTML+='                </section>';
     parent.appendChild(el)
     setStatus(el, date);
@@ -257,7 +257,7 @@ function AddNew() {
                 let sec1 = document.createElement('section');
                 sec1.className = "view";
                 sec1.id = "Sec" + id;
-                sec1.innerHTML = "<h2 id=N" + id + ">" + Name + "</h2>" + "<p id=D" + id + ">" + Dat + "</p>" + "<p id=C" + id + ">" + Cat + "</p>" + "<section class=Button></section> <button class=EDIT id=" + id + " onclick=edit(this.id)><img src=ProductList/ProductList/pencil.png alt=edit width=20px height=20px></button>" + "<button class=DEL id=" + id + " onclick=del(this.id)><img src=ProductList/ProductList/trash.png alt=thrash width=20px height=20px></button>";
+                sec1.innerHTML = "<h2 id=N" + id + ">" + Name + "</h2>" + "<p id=D" + id + ">" + Dat + "</p>" + "<p id=C" + id + ">" + Cat + "</p>" + "<section class=Button></section> <button class=EDIT id=" + id + " onclick=edit(this.id)><Footer src=ProductList/ProductList/pencil.png alt=edit width=20px height=20px></button>" + "<button class=DEL id=" + id + " onclick=del(this.id)><Footer src=ProductList/ProductList/trash.png alt=thrash width=20px height=20px></button>";
                 "</section>" + "</section>";
                 sec1.style.opacity = "0%";
                 sec1.style.transition = "0.5s";
