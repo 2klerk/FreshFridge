@@ -21,7 +21,6 @@
 
 body {
     background: #031323;
-    overflow: hidden;
 }
 
 .container::after {
