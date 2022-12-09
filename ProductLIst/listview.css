@@ -1,12 +1,12 @@
 
 #ProductList {
+    margin-top: 20px;
     width: 100%;
     height: auto;
     padding: .3rem;
     background-color: #eee;
     font: 1rem 'Fira Sans', sans-serif;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-radius: 30px;
 }
 body {
     text-align: center;
@@ -143,7 +143,6 @@ body {
 }
 
 .nav-container .hamburger-lines {
-    display: block;
     height: 26px;
     width: 32px;
     position: absolute;
@@ -308,7 +307,7 @@ body {
     margin-top: 15px;
     width: 60%;
     height: 20% ;
-    box-shadow: 3px 3px 0px 0px #16435e;
+    box-shadow: 3px 3px 3px 3px #16435e;
 }
 #inputFile{
     width: 145px;

@@ -6,18 +6,14 @@
     <link rel="stylesheet" href="About/style.css">
     <link rel="stylesheet" href="TopHeader.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
-    <script src="About/News.js" ></script>
+    <script src="About/News.js"></script>
     <title>Новости</title>
 </head>
 <body>
 <link rel="stylesheet" href="TopHeader.css">
 <header class="TopHeader">
     <div id="logo">
-        <img src="img/fr.png" width="70px" height="70px" alt="fridgeImage">
-    </div>
-    <div id="contacts" style="float:right;">
-        <i class="Number"></i> +777777777 |
-        <i class="Mail"></i> mail.ru
+        <img src="img/fr.png" width="100px" height="100px" alt="fridgeImage">
     </div>
     <ul id="navbar">
         <li><a href="index.html">Главная</a></li>
@@ -28,17 +24,20 @@
     </ul>
 </header>
 <main>
-    <h2 id="News">Новости проекта</h2>
-    <div id="cards">
-        <script>
-            let array=[]
-            array.push(new info("10.09.2022","Работа над главной страницей"))
-            array.push(new info("21.09.2022","Добавление каскадной разметки и новых страниц"))
-            array.push(new info("30.11.2022","Добавлена шапка для лучшей навигации по сайту"))
-            // array.push(new info("4.12.2022","Добавлена функция поиска блюд по содержанию холодильника"))
-            let a=new ManagerNews(array)
-            a.createOnScreen()
-        </script>
+        <div id="H2"><h2 id="News">Новости проекта</h2></div>
+        <div class="ListNews">
+        <div id="cards">
+            <script>
+                let array = []
+                array.push(new info("10.09.2022", "Работа над главной страницей"))
+                array.push(new info("21.09.2022", "Добавление каскадной разметки и новых страниц"))
+                array.push(new info("30.11.2022", "Добавлена шапка для лучшей навигации по сайту"))
+                array.push(new info("8.12.2022","Исправлено взаимодействие с кнопками на странице 'Продукты'"))
+                array.push(new info("9.12.2022","Улучшено визуальное оформление страниц 'Новости', 'Главная'"))
+                let a = new ManagerNews(array)
+                a.createOnScreen()
+            </script>
+        </div>
     </div>
 </main>
 </body>

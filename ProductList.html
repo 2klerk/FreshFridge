@@ -7,17 +7,14 @@
     <link rel="stylesheet" href="ProductLIst/listview.css">
     <link rel="stylesheet" href="TopHeader.css">
     <script src="Class.js"></script>
+    <script src="preload.js"></script>
     <script src="ProductLIst/filter.js"></script>
     <!--    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
 </head>
 <body>
-<header class="TopHeader">
+<header class="TopHeader" style="border-radius: 0 0 0 0">
     <div id="logo">
-        <img src="img/fr.png" width="70px" height="70px" alt="fridgeImage">
-    </div>
-    <div id="contacts" style="float:right;">
-        <i class="Number"></i> +777777777 |
-        <i class="Mail"></i> mail.ru
+        <img src="img/fr.png" width="100px" height="100px" alt="fridgeImage">
     </div>
     <ul id="navbar">
         <li><a href="index.html">Главная</a></li>
@@ -53,16 +50,18 @@
 </div>
 <main>
     <div>
-        <input type="file" id="inputFile">
+        <input type="file" id="inputFile" onchange="updateList()">
         <div>
             <h2>Фильтры</h2>
             <label>Упорядочить<input id="filter1" type="checkbox" name="checkbox" value="value" style="margin-top: -10px"></label>
             <label>По категориям<input id="filter2" type="checkbox" name="checkbox" value="value" style="margin-top: -10px"></label>
         </div>
     </div>
+    <div id="ProductBackground">
     <article id="ProductList">
         <script src="ProductLIst/List.js"></script>
     </article>
+    </div>
     <div id="emptyArea"></div>
     <div>
         <form id="inputArea">

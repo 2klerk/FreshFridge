@@ -1,4 +1,5 @@
 html{
+    font: 1rem 'Fira Sans', sans-serif;
     background-image: url("../img/BackGround/BackgroundDish.jpg");
 }
 body{
@@ -15,10 +16,12 @@ body{
     grid-template-columns: 1fr 1fr;
 }
 .Name{
+    padding: 10px 10px 10px 10px;
     border: solid 1px;
     grid-column: 1;
 }
 .Recipe{
+    padding: 10px 10px 10px 10px;
     white-space: pre-line;
     border: solid 1px;
     grid-column: 2;

@@ -276,6 +276,9 @@ function AddNew() {
 function download() {
     return JSON.stringify(mas);
 }
+function updateList(){
+    console.log(this.result);
+}
 
 function DelAll(){
     const list = document.getElementsByClassName('view');

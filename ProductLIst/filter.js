@@ -1,6 +1,7 @@
 let statusFS= false, statusFCT=false;
 function filterSort(event){
     if(event.checked === true && statusFS===false){
+        preload()
         a.SortByDate("<");
         DelAll();
         let t=a.getArray();
@@ -14,8 +15,10 @@ function filterSort(event){
             }
         }
     }
+    start()
 }
 function filterCat(event){
+    preload();
     if(event.checked === true &&statusFCT===false){
         statusFCT=true;
         const parent=document.querySelector("#ProductList")
@@ -43,4 +46,5 @@ function filterCat(event){
             addE(i, t[i].getName(), t[i].getDate(), t[i].getCat())
         }
     }
+    start();
 }

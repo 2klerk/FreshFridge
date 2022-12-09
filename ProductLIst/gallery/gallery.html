@@ -72,21 +72,75 @@
 </script>
 <a style="color: #d6d0e0" id="truncSTR">1234567890a</a>
 <a style="color: #1c1c1a; background-color: white" id="CAP">123</a>
-
-<input id="inputCAP">
-<button onclick="check()">send</button>
-<footer>
-    <div class="social">
-        <a class="social__icon youtube" href="#">
-            <i class="fab fa-instagram"><img src="img\SocIcon\youtube.png"></i>
-        </a>
-        <a class="social__icon facebook" href="#">
-            <i class="fab fa-instagram"><img src="img\SocIcon\facebook.png"></i>
-        </a>
-        <a class="social__icon telegram" href="#">
-            <i class="fab fa-telegram"><img src="img\SocIcon\telegram.png"></i>
-        </a>
+<div>
+    <div id="boxing" class="box2">1</div>
+    <div class="box2">2</div>
+    <div class="box2">3</div>
+</div>
+<script>
+    let f=false,ctrlOn=false;
+    let listSelected=[];
+    function click(event){
+        event.target.style.border = "solid 4px white";
+    }
+    var myFunction = function() {
+        if(ctrlOn===false) {
+            if (f !== true) {
+                click(event)
+                listSelected.push(event.target)
+                f = true
+            } else {
+                for (let i = 0; i < listSelected.length; i++) {
+                    listSelected[i].style.border = "solid 4px #00d0ff";
+                }
+                listSelected.splice(0, listSelected.length)
+                f = false;
+            }
+        }
+        else{
+            f=true;
+            click(event);
+            listSelected.push(event.target)
+        }
+    };
+    function keyUP(e) {
+        if (window.event.keyCode===17) {
+            ctrlOn=false;
+        }
+    }
+    function keyDown(e) {
+        if (window.event.keyCode===17) {
+            ctrlOn=true;
+        }
+    }
+    document.onkeyup = keyUP;
+    document.onkeydown = keyDown;
+    var elements = document.getElementsByClassName("box2");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener('click', myFunction, false);
+    }
+</script>
+<div id="slider">
+    <div id="line">
+        <div id="circle"></div>
     </div>
-</footer>
+</div>
+<script>
+    let clicked=false;
+    var myFunction1 = function() {
+        if(clicked===false) {
+            var myFunction2 = function () {
+                let t = event.target.querySelector("#circle");
+                if (event.clientX <= event.target.offsetWidth - 50){
+                    t.style.transform = "translate(" + event.clientX + "px)"
+                    event.target.parentNode.style.background="linear-gradient("+event.clientX+"deg, #c5eabb,#61e2f8,#5c91ff,#3c39a7,#187272)";
+                }
+                console.log(event.clientX, event.target.offsetWidth)
+            }
+            document.querySelector("#line").addEventListener('mousemove', myFunction2, false);
+        }
+    }
+    document.querySelector("#circle").addEventListener('click', myFunction1, false);
+</script>
 </body>
 </html>

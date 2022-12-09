@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img\Favicon\buffet.png" type="image/x-icon" >
+    <link rel="icon" href="img\Favicon\buffet.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
     <title>FreshFridge</title>
 </head>
@@ -10,10 +10,6 @@
 <header class="TopHeader">
     <div id="logo">
         <img src="img/fr.png" width="100px" height="100px" alt="fridgeImage">
-    </div>
-    <div id="contacts" style="float:right;">
-        <i class="Number"></i> +777777777 |
-        <i class="Mail"></i> mail.ru
     </div>
     <ul id="navbar">
         <li><a href="ProductList.html">Продукты</a></li>
@@ -34,17 +30,16 @@
                 <a href="#Problem">Смысл</a>
             </ul>
         </nav>
-        <h2 id="Contact">О приложении</h2>
-        <P><a href="News.html">Описание работы</a></P>
         <h3 id="About">Описание</h3>
-        <a>Данный проект предназначен для учёта ваших продуктов. Веб версия была сделана для пользоватлей, у которых нет
+        <a>Данный проект предназначен для учёта ваших продуктов. Веб версия была сделана для пользователей, у которых
+            нет
             возможности скачать приложение на телефон</a>
         <h2>Использование</h2>
         <ul>
             <li><a>В панели навигации вкладка "Продукты" ведём пользователя к страницы с карточками продукта.</a></li>
             <li><a>Вкладка "Блюда" к списку блюд и их рецептам.</a></li>
             <li><a>"Новости" - список нововведений.</a></li>
-            <li><a>И соотвественно "Регистрация" - для созданий нового пользователя</a></li>
+            <li><a>И соответственно "Регистрация" - для созданий нового пользователя</a></li>
             <li><a>"Вход" - для того, чтобы зайти под учётной записью если такая имеется</a></li>
         </ul>
         <h3 id="Problem">Смысл</h3>
@@ -63,9 +58,9 @@
                 может привести к тому, что они будут отправлять продукты в те районы страны где их дефицит.
             </dd>
             <dt>Реализация:</dt>
-            <dd>На данный момент проект реализован на мобильном устройсте
+            <dd>На данный момент проект реализован на мобильном устройстве
                 с операционной системой android(10) на языке программирования java.
-                К приложению подеключена офлайн база данных sqlite.
+                К приложению подключена офлайн база данных sqlite.
             </dd>
             <dt>Планы:</dt>
             <dd>Доработать данное приложение и сделать
@@ -87,10 +82,14 @@
     <div class="GridSocial">
         <h2>Социальные сети</h2>
         <div class="social">
+            <a class="social__icon vk" href="https://m.vk.com/2klerk"><i class="fab fa-instagram"><img
+                    src="img\Footer\SocIcon\vk.png"></i></a>
             <a class="social__icon youtube" href="https://www.youtube.com/"><i class="fab fa-instagram"><img
                     src="img\Footer\SocIcon\youtube.png"></i></a>
-            <a class="social__icon facebook" href="http://facebook.com/"><i class="fab fa-instagram"><img src="img\Footer\SocIcon\facebook.png"></i></a>
-            <a class="social__icon telegram" href="https://web.telegram.org/k/""><i class="fab fa-telegram"><img src="img\Footer\SocIcon\telegram.png"></i></a>
+            <a class="social__icon github" href="https://github.com/2klerk"><i class="fab fa-instagram"><img
+                    src="img\Footer\SocIcon\github.png"></i></a>
+            <a class="social__icon telegram" href="https://web.telegram.org/k/"><i class="fab fa-telegram"><img
+                    src="img\Footer\SocIcon\telegram.png"></i></a>
         </div>
     </div>
     <div class="ContactUs">
@@ -106,12 +105,15 @@
     </div>
 </footer>
 <aside>
-    <h2>Якорные ссылки</h2>
-    <ul>
-        <li><a href="#TopicMain">Главное</a></li>
-        <li><a href="#Contact">Контакты</a></li>
-        <li><a href="#About">Описание</a></li>
-    </ul>
+    <div id="asideCard">
+        <h2>Cсылки на заголовки</h2>
+        <ul>
+            <li><a href="#TopicMain">Главное</a></li>
+            <li><a href="#About">Описание</a></li>
+            <li><a href="#">Использование</a></li>
+            <li><a href="#">Смысл</a></li>
+        </ul>
+    </div>
 </aside>
 </body>
 </html>
